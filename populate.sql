@@ -1,13 +1,3 @@
-/*
-Population Script
-This script is used to Populate all of the Tables in the Database.
-Michael Maffia
-*/
-
-
-
-
---#script for population of PERSON values for employees using proper values
 
 insert into PERSON values ('Michael Michael', '441 Loomis Lane', 'Tacoma', '98411', 'Washington', '2015/06/12');
 insert into PERSON values ('Meera Sakshi', '8519 Sycamore Parkway', 'Topeka', '66667', 'Kansas', '2012/06/11');
@@ -31,7 +21,7 @@ insert into PERSON values ('Pamela Ida', '70 Summer Ridge Lane', 'Lake Charles',
 insert into PERSON values ('Jose Garcia', '546 Red Cloud Point', 'Augusta', '30911', 'Georgia', '2001/07/08');
 
 
---#script for population of PERSON values that are visitors, using proper values
+
 
 insert into PERSON values ('Patrick Grant', '0 Summit Place', 'Winston Salem', '27150', 'North Carolina', '1993/01/22');
 insert into PERSON values ('Wanda Wallace', '05 Debra Avenue', 'Lincoln', '68510', 'Nebraska', '1980/09/17');
@@ -55,7 +45,6 @@ insert into PERSON values ('Evelyn Bailey', '271 Summer Ridge Court', 'Tallahass
 insert into PERSON values ('Scott Wallace', '3844 Iowa Park', 'Saint Petersburg', '33715', 'Florida', '1991/04/16');
 
 
---#script for population of VISITOR values, names used from PERSON
 
 insert into VISITOR values ('35725953', 'Day', '2010/03/08', 'Patrick Grant');
 insert into VISITOR values ('35642460', 'Day', '2010/07/10', 'Wanda Wallace');
@@ -79,7 +68,6 @@ insert into VISITOR values ('35280968', 'Day', '2013/07/13', 'Evelyn Bailey');
 insert into VISITOR values ('67625461', 'Year', '2011/08/24', 'Scott Wallace');
 
 
---#script for population of EMPLOYEE values, names used from PERSON
 
 insert into EMPLOYEE values ('MM0000000', '1980-01-01', 'Office', 'Michael Michael');
 insert into EMPLOYEE values ('MS0568794', '2001-05-07', 'Office', 'Meera Sakshi');
@@ -102,7 +90,7 @@ insert into EMPLOYEE values ('WG3437555', '2008-03-01', 'Zookeeper', 'Wendell Gr
 insert into EMPLOYEE values ('PI5729383', '1987-04-30', 'Zookeeper', 'Pamela Ida');
 insert into EMPLOYEE values ('JG6877451', '2002-08-30', 'Zookeeper', 'Jose Garcia');
 
-  --#script for populating values in OSTAFF, foreign key from EMPLOYEE
+
   insert into OSTAFF values ('os01', 21, 'Human Resources', 'MM0000000');
   insert into OSTAFF values ('os02', 33, 'Accounts Payable',  'MS0568794');
   insert into OSTAFF values ('os03', 44, 'Maintenenace',  'SI7844526');
@@ -116,7 +104,6 @@ insert into EMPLOYEE values ('JG6877451', '2002-08-30', 'Zookeeper', 'Jose Garci
   insert into OSTAFF values ('os011', 12, 'Buying',  'BP8745621');
   insert into OSTAFF values ('os012', 18, 'Management',  'SR3456706');
 
---#script for populating values for Zookeeper, foreign key from EMPLOYEE
 
 insert into ZOOKEEPER values ('s01', 'DR7250462');
 insert into ZOOKEEPER values ('s02', 'PB7345570');
@@ -127,7 +114,6 @@ insert into ZOOKEEPER values ('s06', 'WG3437555');
 insert into ZOOKEEPER values ('s07', 'PI5729383');
 insert into ZOOKEEPER values ('s08', 'JG6877451');
 
---#script for populating values for ZSKILLS, foreign key from ZOOKEEPER.
 
   insert into ZSKILLS values ('s01', 'Maintenenace');
   insert into ZSKILLS values ('s02', 'Feed Supply');
@@ -138,7 +124,6 @@ insert into ZOOKEEPER values ('s08', 'JG6877451');
   insert into ZSKILLS values ('s07', 'Meat Feed');
   insert into ZSKILLS values ('s08', 'Guest Interaction');
 
-  --#script for populating values for FEEDING
 
   Insert into FEEDING values ('Panthera leo', 'Meat');
   Insert into FEEDING values ('Gorilla gorilla', 'Fruit vegetables');
@@ -161,7 +146,6 @@ insert into ZOOKEEPER values ('s08', 'JG6877451');
   Insert into FEEDING values ('Tyrannosaurus rex', 'Meat');
   Insert into FEEDING values ('Panthera tigris', 'Meat');
 
---#script for populating values for ANIMAL, used both real and randomly generated information, foreign key from FEEDING.
 
 Insert into ANIMAL values ('GCYFH6I7N', 'Simba', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Panthera', 'Panthera leo', '2002-03-13', '2005-04-19');
 Insert into ANIMAL values ('P1JBYN6PT', 'Harambe', 'Animalia', 'Chordata', 'Mammalia', 'Primates', 'Homindae', 'Gorilla', 'Gorilla gorilla', '1999-06-13', '2000-07-02');
@@ -185,7 +169,6 @@ Insert into ANIMAL values ('TR29GHHQH', 'Reptar', 'Animalia', 'Chordata','Reptil
 Insert into ANIMAL values ('S2IDJLAEK','Tigger', 'Animalia', 'Chordata', 'Mammalia', 'Carnivora', 'Felidae', 'Panthera', 'Panthera tigris', '2001-04-27', '2003-06-17');
 
 
---#script for populating EXHIBIT values
 
 insert into EXHIBIT (ExhibitID, Name, Location, Hours) values (65, 'Frozen Mountain', 'North Zone', '9:00-5:00');
 insert into EXHIBIT (ExhibitID, Name, Location, Hours) values (11, 'Rocky Hill', 'West Zone', '9:00-5:00');
